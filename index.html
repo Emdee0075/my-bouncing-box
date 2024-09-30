@@ -1,0 +1,50 @@
+$>cat index.html
+<html style="background-color: black">
+    <div
+        id="my_bouncing_box"
+        style="background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;"
+    >
+        I have now loaded it up.
+    </div>
+    <script type="text/javascript">
+        myBouncing = document.getElementById("my_bouncing_box");
+
+        
+        var shapexs = 1;
+        var shapeys = 1;
+
+// initial position
+var shapexb = 0;
+var shapeyb = 0;
+
+var width = window.innerWidth;
+var height = window.innerHeight;
+
+
+var id = setInterval(recent, 0.7);
+var r = document.getElementById("my_bouncing_box").style.border-radius;
+
+
+
+function recent(){
+
+document.getElementById("my_bouncing_box").style.left = shapexb + 'px';
+document.getElementById("my_bouncing_box").style.top = shapeyb +'px';
+
+
+if (shapexb >width){shapexs = 0-shapexs;}
+if (shapexb< 0){shapexs = 0 - shapexs;}
+if (shapeyb > height){shapeys = 0 - shapeys;}
+if (shapeyb < 0){shapeys = 0 - shapeys;}
+
+shapexb += shapexs;
+shapeyb += shapeys;
+
+}
+
+    </script>
+</html>
+$>
+
+
+
